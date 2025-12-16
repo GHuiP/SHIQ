@@ -26,6 +26,9 @@ if [ -z "$(ls -A "$MAT_DIR")" ]; then
 fi
 
 # Step 2: Process .mat files with MATLAB
+
+
+
 matlab -nodisplay -r "batch_sid_process('$MAT_DIR', '$OUTPUT_DIR'); exit;"
 
 # Step 3: Clean up temporary directory

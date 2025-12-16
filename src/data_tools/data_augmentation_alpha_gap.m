@@ -10,7 +10,7 @@ clc;
 
 % Please accordingly modify variables "DATA_DIR", "beta", "theta", "k" and
 % "alpha". Note "output_dir" is automatically generated based on "DATA_DIR"
-DATA_DIR='<you dir>'; % Input your dir for data
+DATA_DIR='/home/gyh/code/specularityRemovalTask/data/output/'; % Input your dir for data
 
 %% Parameters
 beta=10;

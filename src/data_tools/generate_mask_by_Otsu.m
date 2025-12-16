@@ -7,8 +7,8 @@ close all;
 clc;
 
 % Please modify two variables: (a) DATA_DIR; (b) output_dir
-DATA_DIR='<your dir>'; % input your dir for input data
-output_dir='<your dir>' % input your dir for saving results
+DATA_DIR='/home/gyh/code/specularityRemovalTask/data/output/1.0/'; % input your dir for input data
+output_dir='/home/gyh/code/specularityRemovalTask/data/output/1.0/'; % input your dir for saving results
 if ~exist(output_dir)
     mkdir(output_dir)
 end
@@ -23,7 +23,7 @@ for j=1:numel(dataFiles)
     disp(name);
     img=im2double(imread(fullfile(dataDIR,dataFiles(j).name)));
     % Rolling Otsu
-    mask=Rolling_L_Otsu(img,num_otsu);
+    mask=rolling_L_Otsu(img,num_otsu);
     result_path=output_dir;
     % Save binary mask image
     mask_name=strrep(name,'_S','_T'); % "_T" denotes mask images
