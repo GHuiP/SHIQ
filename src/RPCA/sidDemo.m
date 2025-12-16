@@ -117,9 +117,9 @@ function sidDemo(input_mat_path, output_result_path)
             specular_color = cat(3, uint8(specular_R_norm * 255), uint8(specular_G_norm * 255), uint8(specular_B_norm * 255));
             
             % 保存图像
-            original_path = fullfile(path, [name '_original_color.png']);
-            transmittance_path = fullfile(path, [name '_transmittance_color.png']);
-            specular_path = fullfile(path, [name '_specular_color.png']);
+            original_path = fullfile(path, [name '_A.png']);
+            transmittance_path = fullfile(path, [name '_D.png']);
+            specular_path = fullfile(path, [name '_S.png']);
             
             imwrite(original_color, original_path);
             imwrite(transmittance_color, transmittance_path);
